@@ -1,5 +1,5 @@
 {
-  "name": "abr-xcorr",
+  "name": "cs-xcorr",
   "version": "1.0.0",
   "description": "Cross correlation in JS",
   "main": "xcorr.js",
