@@ -8,19 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adblockradio/xcorr.git"
+    "url": "git+https://github.com/ConnorSmith-pf/xcorr.git"
   },
-  "author": "Alexandre Storelli <a_npm@storelli.fr>",
+  "author": "Connor Smith <connor.github@gmail.com>",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/adblockradio/xcorr/issues"
+    "url": "https://github.com/ConnorSmith-pf/xcorr/issues"
   },
-  "homepage": "https://github.com/adblockradio/xcorr#readme",
+  "homepage": "https://github.com/ConnorSmith-pf/xcorr#readme",
   "dependencies": {
-    "dsp.js": "git+https://git@github.com/corbanbrook/dsp.js"
+    "dsp.js": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "^6.2.2",
-    "pngjs": "^3.4.0"
+    "mocha": "^8.3.2"
   }
 }
