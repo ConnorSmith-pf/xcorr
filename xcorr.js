@@ -1,4 +1,5 @@
 const dsp = require('dsp.js');
+const Buffer = require('buffer').Buffer;
 
 /**
  * Cross-correlation of two signals of identical length (ring correlation with FFT)
