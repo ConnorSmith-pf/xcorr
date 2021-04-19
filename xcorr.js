@@ -6,8 +6,6 @@ const dsp = require('dsp.js');
  * @param {Buffer} sig2 16-bit PCM buffer
  */
 
-const DEBUG_PLOT = false; // plot the result for debug purposes
-
 exports.Xcorr = function (sig1, sig2) {
 	if (sig1.length !== sig2.length) {
 		throw new Error(`Xcorr: signal have different lengths ${sig1.length} vs ${sig2.length}`);
@@ -58,24 +56,9 @@ exports.Xcorr = function (sig1, sig2) {
 	const iMax = xcorr.reduce((indexTemporaryMax, testCoef, indexTestCoef) =>
 		Math.abs(testCoef) > Math.abs(xcorr[indexTemporaryMax]) ? indexTestCoef : indexTemporaryMax, 0);
 
-	if (DEBUG_PLOT) _plot(xcorr);
-
 	return {
 		xcorr,
 		xcorrMax: xcorr[iMax],
 		iMax: iMax < l / 2 ? iMax : iMax - l, // have iMax relative to index 0
 	};
-}
-
-const _plot = function(xcorr) {
-	const plot = require("./plot.js");
-	const l = xcorr.length;
-	const imgW = 800, imgH = 600;
-	const img = plot.newPng(imgW,imgH);
-
-	for (let x = 0; x < imgW; x++) {
-		const value = xcorr[Math.floor(x * l / imgW)];
-		plot.drawMarker(img, x, Math.round(imgH * value), 2);
-	}
-	plot.savePng(img, "xcorr.png");
 }
