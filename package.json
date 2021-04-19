@@ -1,6 +1,6 @@
 {
   "name": "cs-xcorr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cross correlation in JS",
   "main": "xcorr.js",
   "scripts": {
