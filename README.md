@@ -24,3 +24,6 @@ Xcorr(sig2, sig1).iMax === 1
 ```
 
 If the input signals do not have a length equal to a power of 2 (2, 4, 8, 16…), they are padded with zeroes.
+
+## Credit to Alexandre Storelli
+Based on Alexandre Storelli's xcorr repository - https://github.com/dest4 (https://github.com/adblockradio/xcorr)
